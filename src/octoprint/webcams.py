@@ -53,7 +53,7 @@ def webcams_to_dict(allWebcams):
 
 
 def webcams_to_list(allWebcams):
-    return sorted(set(chain(*allWebcams.values())))
+    return sorted(set(chain(*allWebcams.values())), key=lambda x: x.name)
 
 
 class WebcamConfiguration:
